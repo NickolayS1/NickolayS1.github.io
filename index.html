@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html language="ru">
 <head>
@@ -8,9 +9,9 @@
     <link rel="stylesheet" href="static/css/custom.css">
     <title> Верхняя строчка | Должность </title>
 </head>
-<body class="{{ 'darker-bg' if dark_mode==True else '' }}">
+<body class="darker-bg">
 <!-- Секция промо с темным фоном - шапка сайта -->
-<section class="promo {{ 'darker-bg' if dark_mode==True else 'dark-bg'}} pt-2 pb-5">
+<section class="promo darker-bg pt-2 pb-5">
     <div class="container">
         <!-- Навигационная панель с логотипом и кнопкой -->
         <nav class="navbar navbar-expand-lg mb-5 navbar-dark">
@@ -24,11 +25,11 @@
                              width="70">
                     </div>
                     <div class="logo-right" style="margin-left: 6px;">
-                        <div class="logo-title link-purple {{ 'text-white' if dark_mode==True else '' }}">
-                            {{ "Резюме" if lang == 'ru' else "Resume" }}
+                        <div class="logo-title link-purple text-white">
+                            Resume
                         </div>
-                        <div class="logo-subtitle text-yellow {{ 'text-white' if dark_mode==True else '' }}">
-                            {{ "Студент" if lang == 'ru' else "Student" }}
+                        <div class="logo-subtitle text-yellow text-white">
+                            Student
                         </div>
                     </div>
                 </a>
@@ -45,44 +46,44 @@
                         <!-- Ссылки навигации -->
                         <li class="nav-item me-3">
                             <a href="#story"
-                               class="nav-link link-purple link-border-bottom {{ 'text-white' if dark_mode==True else '' }}">
-                                {{ "Обо мне" if lang == 'ru' else "About me" }}
+                               class="nav-link link-purple link-border-bottom text-white">
+                                About me
                             </a>
                         </li>
                         <li class="nav-item me-3">
                             <a href="#projects"
-                               class="nav-link link-purple link-border-bottom {{ 'text-white' if dark_mode==True else '' }}">
-                                {{ "Мой опыт работы" if lang == 'ru' else "My work experience" }}
+                               class="nav-link link-purple link-border-bottom text-white">
+                                My work experience
                             </a>
                         </li>
                         <li class="nav-item me-3">
                             <a href="#contact"
-                               class="nav-link link-purple link-border-bottom {{ 'text-white' if dark_mode==True else '' }}">
-                                {{ "Сотрудничество" if lang == 'ru' else "Collaboration" }}
+                               class="nav-link link-purple link-border-bottom text-white">
+                                Collaboration
                             </a>
                         </li>
                         <li class="nav-item me-3">
                             <a href="https://github.com"
-                               class="nav-link link-purple link-border-bottom {{ 'text-white' if dark_mode==True else '' }}">
+                               class="nav-link link-purple link-border-bottom text-white">
                                 Github
                             </a>
                         </li>
                         <li class="nav-item me-3">
                             <a href="#contact"
-                               class="nav-link link-purple link-border-bottom {{ 'text-white' if dark_mode==True else '' }}">
-                                {{ "Написать мне" if lang == 'ru' else "Contact Me" }}
+                               class="nav-link link-purple link-border-bottom text-white">
+                                Contact Me
                             </a>
                         </li>
                         <!-- Кнопки для смены темы и языка -->
                         <li class="nav-item me-3">
                             <form method="post" action="/">
-                                <input type="submit" value={{ "Тема" if lang == 'ru' else "Theme" }} name="mode"
+                                <input type="submit" value=Theme name="mode"
                                 class="btn text-center btn-yellow"/>
                             </form>
                         </li>
                         <li class="nav-item me-3">
                             <form method="post" action="/">
-                                <input type="submit" value={{ "Язык" if lang == 'ru' else "Language" }} name="lang"
+                                <input type="submit" value=Language name="lang"
                                 class="btn text-center btn-yellow"/>
                             </form>
                         </li>
@@ -94,133 +95,106 @@
         <!-- Блок приветствия с основной информацией -->
         <div class="row py-0 py-sm-5">
             <div class="col-12 col-lg-8 offset-lg-2 mb-0 mb-sm-5 py-5">
-                <h1 class="h1 font-weight-bold font greeting-text text-blue {{ 'text-white' if dark_mode==True else '' }}">
-                    {{ "Привет! Это моё резюме." if lang == 'ru' else "Hi! This is my resume." }}</h1>
-                <p class="promo-text pb-3 {{ 'text-white' if dark_mode==True else '' }}">
-                    {{ "Я студент Высшей
-                    Школы Экономики, ФКН, ПМИ, стремлюсь к постоянному саморазвитию и улучшению своих навыков. Мечтаю
-                    начать ходить на все лекции, чтобы не только усваивать материал, но и активно участвовать в
-                    обсуждениях. В свободное время увлекаюсь изучением новых технологий, программированием и решением
-                    задач, которые помогают мне расти как специалисту." if lang == 'ru' else "I am a student from Higher
+                <h1 class="h1 font-weight-bold font greeting-text text-blue text-white">
+                    Hi! This is my resume.</h1>
+                <p class="promo-text pb-3 text-white">
+                    I am a student from Higher
                     School of Economics,
                     FCS, AMI, striving for continuous self-improvement and skill development. I dream of attending all
                     lectures to
                     not only absorb the material but also actively participate in discussions. In my free time, I enjoy
-                    exploring new technologies, programming, and solving problems that help me grow as a professional."
-                    }} </p>
-                <a href="#contact" class="btn text-center btn-yellow">{{ "Написать мне" if lang == 'ru' else "Contact
-                    me" }}</a>
+                    exploring new technologies, programming, and solving problems that help me grow as a professional. </p>
+                <a href="#contact" class="btn text-center btn-yellow">Contact
+                    me</a>
             </div>
         </div>
     </div>
 </section>
 <!-- Секция "Обо мне" -->
 <section class="story container py-5 text-center" id="story">
-    <h2 class="h1 font-weight-bold mt-4 mb-3 mb-sm-5 pb-3 navigo-font {{ 'text-white' if dark_mode==True else '' }}">{{
-        "Обо мне" if lang == 'ru' else "About me" }}</h2>
+    <h2 class="h1 font-weight-bold mt-4 mb-3 mb-sm-5 pb-3 navigo-font text-white">About me</h2>
     <div class="row">
         <div class="col-12 col-sm-8 offset-sm-2 px-2 pb-5">
-            <p class="font-weight-bold pb-4 {{ 'text-white' if dark_mode==True else '' }}">{{ "Я обычный студент, 18
-                лет.
-                Трачу много времени на учебу. Однако также увлекаюсь игрой на гитаре и джазом. Не люблю себя
-                нахваливать, поэтому пишу кратко." if lang == 'ru' else "I'm just an ordinary 18 year old, student. I
+            <p class="font-weight-bold pb-4 text-white">I&#39;m just an ordinary 18 year old, student. I
                 spend most of my time studying. However i also enjoy playing the guitar and listening to jazz. I am not
-                the type of person who brags about myself, therefore i write very shortly." }}
+                the type of person who brags about myself, therefore i write very shortly.
         </div>
     </div>
 </section>
 <!-- Секция опыта работы с темным фоном -->
-<section class="projects {{ 'darker-bg' if dark_mode==True else 'dark-bg'}} pt-3 pt-sm-5 pb-3" id="projects">
+<section class="projects darker-bg pt-3 pt-sm-5 pb-3" id="projects">
     <div class="container">
-        <h2 class="h1 font-weight-bold text-center mt-4 mt-sm-5 mb-0 mb-sm-4 pb-5 navigo-font {{ 'text-white' if dark_mode==True else '' }}">
-            {{ 'Мой опыт работы' if lang =='ru' else 'My work experience'}}</h2>
+        <h2 class="h1 font-weight-bold text-center mt-4 mt-sm-5 mb-0 mb-sm-4 pb-5 navigo-font text-white">
+            My work experience</h2>
 
         <div class="work-experience text-white">
             <div class="d-flex align-items-center mb-4">
                 <img src="../static/01_Logo_HSE_full_rus_PANTONE_for_dark_2.png" alt="HSE Logo" class="me-3"
                      style="height: 60px; margin-top: -6px;">
                 <div class="d-flex flex-column justify-content-center">
-                    <h3 class="h4 mb-1 {{ 'text-white' if dark_mode==True else '' }}">{{"НИУ «ВШЭ»" if lang == 'ru' else
-                        'HSE University'}}</h3>
-                    <p class="text-white-40 mb-0 {{ 'text-white' if dark_mode==True else '' }}">{{'Сентябрь 2023 –
-                        Настоящее время' if lang == 'ru' else 'September 2023 - Present time'}}</p>
+                    <h3 class="h4 mb-1 text-white">HSE University</h3>
+                    <p class="text-white-40 mb-0 text-white">September 2023 - Present time</p>
                 </div>
             </div>
 
             <div class="position mb-4" style="margin-left: 20px;">
-                <h4 class="h5 text-purple {{ 'text-white' if dark_mode==True else '' }}">{{'Студент' if lang=='ru' else
-                    'Student'}}</h4>
-                <p class="text-white {{ 'text-white' if dark_mode==True else '' }}" style="opacity: 0.4">{{'Сентябрь
-                    2023 –
-                    Настоящее время' if lang == 'ru' else 'September 2023 - Present time'}}</p>
-                <p class="{{ 'text-white' if dark_mode==True else '' }}">{{'Занимаюсь изучением математики и
-                    программирования на бакалавриате ВШЭ ПМИ.' if lang=='ru' else 'Currently studying maths and programming in HSE AMI'}}</p>
+                <h4 class="h5 text-purple text-white">Student</h4>
+                <p class="text-white text-white" style="opacity: 0.4">September 2023 - Present time</p>
+                <p class="text-white">Currently studying maths and programming in HSE AMI</p>
             </div>
         </div>
         <section class="goals container pt-3 pt-sm-5 pb-3">
-            <h2 class="h2 font-weight-bold my-4 {{ 'text-white' if dark_mode==True else '' }}">{{'Мои проекты' if
-                lang=='ru' else 'My projects'}}</h2>
+            <h2 class="h2 font-weight-bold my-4 text-white">My projects</h2>
             <div class="row">
                 <div class="col-12 col-sm-8 pb-1">
-                    <p class="pb-2 {{ 'text-white' if dark_mode==True else '' }}">{{'Консольное приложение Image
-                        Processor на C++.' if lang=='ru' else 'Console application Image Processor made in C++'}} <br>
-                        {{'Android приложение Калимба на Kotlin.' if lang=='ru' else 'Android App Kalimba made in
-                        Kotlin.'}}<br> {{'[в разработке] Определение аккордов по аудиозаписи' if lang=='ru' else '[in
-                        progress] Identifying chords via audio samples'}} </p>
+                    <p class="pb-2 text-white">Console application Image Processor made in C++ <br>
+                        Android App Kalimba made in
+                        Kotlin.<br> [in
+                        progress] Identifying chords via audio samples </p>
                 </div>
             </div>
         </section>
 </section>
 <!-- Секция личных целей -->
 <section class="goals container pt-3 pt-sm-5 pb-3">
-    <h2 class="h2 font-weight-bold my-4 {{ 'text-white' if dark_mode==True else '' }}">{{'Мои цели' if lang=='ru' else
-        'My goals'}}</h2>
+    <h2 class="h2 font-weight-bold my-4 text-white">My goals</h2>
     <div class="row">
         <div class="col-12 col-sm-8 pb-1">
-            <p class="pb-2 {{ 'text-white' if dark_mode==True else '' }}">{{ "Получить прочную базу знаний в сфере IT,
-                чтобы стать востребованным специалистом." if lang == 'ru' else "To build a strong foundation of
-                knowledge in IT to become a sought-after professional." }}<br>
-                {{ "Находить баланс между учебой, хобби и временем, проведенным с семьей." if lang == 'ru' else "To
-                balance my studies with hobbies and quality time with family." }}<br>
-                {{ "Прочитать философские труды, такие как 'Бытие и Время' Мартина Хайдеггера, чтобы расширить свой
-                кругозор." if lang == 'ru' else "To read philosophical works like 'Sein und Zeit' by Martin Heidegger to
-                broaden my intellectual horizons." }} </p>
+            <p class="pb-2 text-white">To build a strong foundation of
+                knowledge in IT to become a sought-after professional.<br>
+                To
+                balance my studies with hobbies and quality time with family.<br>
+                To read philosophical works like &#39;Sein und Zeit&#39; by Martin Heidegger to
+                broaden my intellectual horizons. </p>
         </div>
     </div>
 </section>
 <!-- Навыки -->
 <section class="goals container pt-3 pt-sm-5 pb-3">
-    <h2 class="h2 font-weight-bold my-4 {{ 'text-white' if dark_mode==True else '' }}">{{'Навыки' if lang=='ru' else
-        'Skills'}}</h2>
+    <h2 class="h2 font-weight-bold my-4 text-white">Skills</h2>
     <div class="row">
         <div class="col-12 col-sm-8 pb-1">
-            <p class="pb-2 {{ 'text-white' if dark_mode==True else '' }}">{{'Программирование на Python, C, C++, x86
-                ASM.' if lang=='ru' else 'Programming in Python, C, C++, x86 ASM.'}} <br> {{'Умение решать интегралов.'
-                if lang=='ru' else 'Integral solving skill'}} <br> {{'Знание английского языка на уровне C2.' if
-                lang=='ru' else 'English language level - C2'}} <br> {{'Умение использовать USCS Genome Browser.' if
-                lang=='ru' else 'Can use USCS Genome Browser.'}} </p>
+            <p class="pb-2 text-white">Programming in Python, C, C++, x86 ASM. <br> Integral solving skill <br> English language level - C2 <br> Can use USCS Genome Browser. </p>
         </div>
     </div>
 </section>
 
 <!-- Секция сотрудничества -->
 <section class="goals container mb-5 pb-sm-5 pb-0" id="contact">
-    <h2 class="h2 font-weight-bold my-4 {{ 'text-white' if dark_mode==True else '' }}">{{'Сотрудничество' if lang=='ru'
-        else 'Collaboration'}}</h2>
+    <h2 class="h2 font-weight-bold my-4 text-white">Collaboration</h2>
     <div class="row">
         <div class="col-12 col-sm-8 pb-1">
-            <p class="pb-1 mb-1 {{ 'text-white' if dark_mode==True else '' }}">{{'Если интересно, что я могу для вас
-                сделать, пишите:' if lang=='ru' else 'If interested in what can I do for you:'}}</p>
+            <p class="pb-1 mb-1 text-white">If interested in what can I do for you:</p>
             <!-- Блок с кнопками для связи -->
             <div class="row">
                 <div class="col-12 col-sm-9">
                     <p class="d-flex justify-content-start gap-2 flex-wrap">
                         <a href="https://t.me/nicknicht" class="btn mb-3 btn-yellow"
-                           target="_blank">{{'Написать в Telegram' if lang=='ru' else 'DM in Telegram'}}</a>
+                           target="_blank">DM in Telegram</a>
                         <a href="https://example.com/" class="btn mb-3 btn-yellow"
-                           target="_blank">{{'Посмотреть резюме' if lang=='ru' else 'Check out the resume'}}</a>
+                           target="_blank">Check out the resume</a>
                         <a href="mailto:crabsburger@gmail.com" class="btn mb-3 btn-yellow"
-                           target="_blank">{{'Написать на почту' if lang=='ru' else 'Email me'}}</a>
+                           target="_blank">Email me</a>
                     </p>
                 </div>
             </div>
@@ -229,11 +203,11 @@
 </section>
 
 <!-- Подвал сайта с темным фоном -->
-<footer class="footer {{ 'darker-bg' if dark_mode==True else 'dark-bg'}}">
+<footer class="footer darker-bg">
     <nav class="container navbar ">
         <ul class="nav m-auto py-2">
-            <li class="nav-item mx-3 {{ 'text-white' if dark_mode==True else '' }}">
-                {{'Cделано с любовью в 2024 году.' if lang=='ru' else 'Made with love in 2024.'}}
+            <li class="nav-item mx-3 text-white">
+                Made with love in 2024.
             </li>
         </ul>
     </nav>
